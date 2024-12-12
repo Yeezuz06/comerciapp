@@ -1,18 +1,17 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { resolve } from 'path';
 
-// Exporta la configuración para Vite
 export default defineConfig({
   plugins: [react()],
+  build: {
+    outDir: 'dist', // Asegura que los archivos se construyan en el directorio 'dist'
+  },
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src'), // Permite usar '@' como alias para 'src'
+      '@': '/src',
     },
   },
-  build: {
-    rollupOptions: {
-      external: [], // Agrega dependencias aquí si necesitas excluirlas del build
-    },
+  server: {
+    port: 3000,
   },
 });
