@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Reviews from './pages/Reviews';
+import home from './pages/home';
+import login from './pages/login';
+import register from './pages/register';
+import reviews from './pages/reviews';
 
 const App = () => {
   return (
